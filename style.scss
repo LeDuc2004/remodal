@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+@mixin sp {
+  @media screen and (max-width: 667px) {
+    @content;
+  }
+}
+
+body {
+  background-color: gray;
+  width: 99%;
+  height: 99vh;
+  margin: 0;
+}
+
+.name_modal {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  padding-bottom: 20px;
+  overflow: hidden;
+  @include sp {
+    width: calc(100% - 40px);
+  }
+  h1 {
+    background: #27c290;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    @include sp {
+      font-size: 18px;
+    }
+  }
+  .content {
+    position: relative;
+    margin: 20px 40px;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-image: url("/assets/boxone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    @include sp {
+      font-size: 18px;
+      margin: 0px;
+      padding: 25px 20px;
+    }
+  }
+  .modal_line {
+    display: inline-block;
+    height: 5px;
+    background: #27c290;
+    margin: 0 40px;
+    @include sp {
+      width: calc(100% - 40px);
+      margin: 0 20px;
+    }
+  }
+  .btn {
+    border-radius: 4px;
+    border: 3px solid #27c290;
+    background: #fff;
+    color: #27c290;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 40px;
+    margin: 0 40px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    @include sp {
+      margin: 0 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      padding: 10px 50px;
+      text-align: center;
+    }
+    &:hover {
+      transform: translatey(-5px);
+      border-color: #14d697;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      // box-shadow: 0px 5px 0 0 #ddd;
+    }
+  }
+  .option_deny {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    @include sp {
+      margin-left: 20px;
+    }
+    p {
+      margin: 0;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include sp {
+        font-size: 12px;
+      }
+    }
+    input {
+      cursor: pointer;
+      width: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .option_cancel {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #e6eef5;
+    color: #555;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: #bec8d1;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Remodal example</title>
+    <meta name="description" content="Remodal example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../dist/remodal.css" />
+    <link rel="stylesheet" href="../dist/remodal-default-theme.css" />
+  </head>
+  <body>
+    <div class="remodal name_modal" data-remodal-id="modal">
+      <h1>スポンゼルⓇの供給に関するお知らせ</h1>
+      <div class="content">
+        スポンゼルⓇ(LTLファーマ株式会社)の供給不足に伴い、「サージセルⓇ・アブソーバブル・ヘモスタットＭＤ（綿型）」(ジョンソン・エンド・ジョンソン株式会社)を代替製品としてご案内しております。
+      </div>
+      <span class="modal_line"></span>
+      <div class="btn JJ_option" data-remodal-action="confirm">
+        サージセルⓇ未採用のためサンプルを希望する
+      </div>
+      <div class="btn JJ_option" data-remodal-action="confirm">
+        スポンゼルⓇ供給情報及び代替サージセルⓇの 製品情報を確認する
+      </div>
+      <div class="option_deny">
+        <input type="checkbox" />
+        <p>サージセルⓇの情報が不要のため以後表示しない</p>
+      </div>
+      <div data-remodal-action="close" aria-label="Close" class="option_cancel">
+        閉じる
+      </div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.js"></script>
+    <script src="../dist/remodal.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js"
+      integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
